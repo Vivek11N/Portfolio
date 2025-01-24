@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { FaInstagram, FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';  // Import FaEnvelope for email icon
-import './Contact.css';  // Import custom styles for hover effect
+import { FaInstagram, FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
+import { Player } from '@lottiefiles/react-lottie-player';
+import './Contact.css';
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -22,11 +23,11 @@ function Contact() {
     const response = await fetch('http://localhost:8080/api/contact', {
       method: 'POST',
       headers: {
-          'Content-Type': 'application/json',
+        'Content-Type': 'application/json',
       },
       body: JSON.stringify(formData),
-  });
-  
+    });
+
     if (response.ok) {
       alert('Message sent successfully!');
       setFormData({ name: '', email: '', message: '' });  // Clear form after submission
@@ -38,6 +39,16 @@ function Contact() {
   return (
     <section className="container mt-5">
       <h1 className="text-center mb-4">Contact Me</h1>
+
+      {/* Lottie animation positioned to the right */}
+      <div className="lottie-container">
+        <Player
+          autoplay
+          loop
+          src="Animation 2.json"  // Replace with your Lottie animation URL or local JSON file
+          style={{ height: '200px', width: '200px' }}
+        />
+      </div>
 
       {/* Mail icon with Gmail redirect */}
       <p className="text-center">
@@ -96,7 +107,7 @@ function Contact() {
       </form>
 
       <div className="text-center mt-3">
-        {/* Instagram Icon */}
+        {/* Social Media Icons */}
         <a
           href="https://www.instagram.com/your-profile"  // Replace with your Instagram profile link
           target="_blank"
@@ -106,9 +117,8 @@ function Contact() {
           <FaInstagram size={40} />
         </a>
 
-        {/* LinkedIn Icon */}
         <a
-          href="https://www.linkedin.com/in/your-profile"  // Replace with your LinkedIn profile link
+          href="https://www.linkedin.com/in/www.linkedin.com/in/vivek-narayanan12"  // Replace with your LinkedIn profile link
           target="_blank"
           rel="noopener noreferrer"
           className="social-icon"
@@ -116,7 +126,6 @@ function Contact() {
           <FaLinkedin size={40} />
         </a>
 
-        {/* GitHub Icon */}
         <a
           href="https://github.com/your-profile"  // Replace with your GitHub profile link
           target="_blank"

@@ -1,5 +1,5 @@
 import React from 'react';
-import './AboutText.css'; // External CSS for styling
+import './AboutText.css'; 
 
 function AboutText() {
   return (
@@ -12,7 +12,7 @@ function AboutText() {
       </div>
       <div className="about-image-container">
         <img
-          src="./portfolio-bg.png" // Replace with the actual image path
+          src="./portfolio-bg.png" 
           alt="Vivek portrait"
           className="about-image"
         />

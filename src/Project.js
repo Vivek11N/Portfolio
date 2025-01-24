@@ -4,7 +4,7 @@ import axios from 'axios';
 function Projects() {
   const [projects, setProjects] = useState([]);
 
-  // Fetch projects from the backend
+  
   useEffect(() => {
     axios
       .get('http://localhost:8080/api/projects')
@@ -27,9 +27,9 @@ function Projects() {
         {projects.map((project) => (
           <div key={project.id} className="col-md-4 mb-4">
             <div className="card h-100">
-              {/* Fetching image as byte array and using a base64 encoded URL */}
+              {}
               <img
-                src={getImageUrl(project.id)} // Calls backend to get the image
+                src={getImageUrl(project.id)} 
                 alt={project.title}
                 className="card-img-top"
                 style={{ height: '200px', objectFit: 'cover' }}

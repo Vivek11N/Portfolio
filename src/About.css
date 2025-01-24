@@ -10,18 +10,18 @@
     font-size: 1.1rem;
     line-height: 1.8;
     margin-left: 20px;
-    max-width: 550px; /* Restrict content width */
+    max-width: 550px; 
     margin-top: 10px;
-    word-wrap: break-word; /* Ensure words break properly without overflowing */
+    word-wrap: break-word; 
   }
   
   .left-align {
-    margin-top: 20px;  /* Add some space between the text and button */
-    text-align: left;  /* Align content to the left */
+    margin-top: 20px;  
+    text-align: left;  
   }
   
   .resume-button {
-    background-color: #4CAF50; /* Green background */
+    background-color: #4CAF50; 
     color: white;
     align-items: center;
     font-size: 1rem;
@@ -31,12 +31,12 @@
     cursor: pointer;
     text-decoration: none;
     display: inline-block;
-    transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+    transition: transform 0.3s ease, background-color 0.3s ease; 
   }
   
   .resume-button:hover {
-    background-color: #24c77b; /* Darker green when hovered */
-    transform: scale(1.1); /* Zoom-in effect */
+    background-color: #24c77b; 
+    transform: scale(1.2); 
   }
   .stars {
     position: fixed;
@@ -55,7 +55,7 @@
     height: 2px;
     background: white;
     border-radius: 50%;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Glow effect */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8); 
     animation: twinkle 2s infinite ease-in-out, fall linear infinite;
   }
   
@@ -70,10 +70,10 @@
   
   @keyframes fall {
     0% {
-      transform: translateY(-100%); /* Start above the screen */
+      transform: translateY(-100%); 
     }
     100% {
-      transform: translateY(100vh); /* End below the screen */
+      transform: translateY(100vh); 
     }
   }
   

@@ -2,9 +2,9 @@ import React from 'react';
 import AboutText from './AboutText';
 
 import Skills from './Skills';
-import Experience from './Experience';
+
 import ResumeButton from './ResumeButton';
-import './About.css'; // Custom CSS for styling
+import './About.css'; 
 
 function About() {
   return (

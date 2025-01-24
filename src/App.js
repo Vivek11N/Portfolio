@@ -5,9 +5,8 @@ import About from './About';
 import Projects from './Project';
 import Contact from './Contact';
 import Home from './Home';
-import './App.css';  // Ensure your App.css is properly imported
-import AddProject from './AddProject';
-import 
+import './App.css';  
+
 function App() {
   return (
     <Router>
@@ -21,7 +20,7 @@ function App() {
         </div>
         <div id="projects">
           <Projects />
-          <AddProject />
+          
         </div>
         <div id="contact">
           <Contact />

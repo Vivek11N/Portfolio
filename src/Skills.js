@@ -1,4 +1,6 @@
-import React from 'react';
+import React from "react";
+import { Player } from "@lottiefiles/react-lottie-player"; 
+import "./skills.css";
 
 function Skills() {
   const skills = [
@@ -11,20 +13,34 @@ function Skills() {
 
   return (
     <section className="skills">
-      <h2>Skills</h2>
-      <div className="skills-grid">
-        {skills.map((skill) => (
-          <div className="skill-item" key={skill.name}>
-            <img src={skill.imgSrc} alt={skill.name} className="skill-img" />
-            <p>{skill.name}</p>
-            <div className="skill-level">
-              <div
-                className="level-bar"
-                style={{ width: `${skill.level}%` }}
-              ></div>
+      <h1>Skills</h1>
+      <div className="skills-container">
+       
+        <div className="lottie-section">
+          
+          <Player
+            autoplay
+            loop
+            src="Animation.json" 
+            style={{ height: "100%", width: "100%" }}
+          />
+        </div>
+
+        
+        <div className="skills-grid">
+          {skills.map((skill) => (
+            <div className="skill-card" key={skill.name}>
+              <img src={skill.imgSrc} alt={skill.name} className="skill-img" />
+              <h3 className="skill-name">{skill.name}</h3>
+              <div className="skill-level">
+                <div
+                  className="level-bar"
+                  style={{ width: `${skill.level}%` }}
+                ></div>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );

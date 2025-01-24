@@ -1,23 +1,50 @@
 .social-icon {
-  color: #333; /* Default color */
+  color: #333; 
   transition: color 0.3s ease, text-shadow 0.3s ease;
-  margin: 0 15px; /* Add some spacing between icons */
+  margin: 0 15px; 
 }
 
 .social-icon:hover {
-  color: #e1306c; /* Default hover color (Instagram pink) */
-  text-shadow: 0 0 10px rgba(225, 48, 108, 0.7); /* Glow effect */
+  color: #e1306c; 
+  text-shadow: 0 0 10px rgba(225, 48, 108, 0.7); 
 }
 
-/* Specific hover colors for different icons */
+
+
+
+.lottie-container {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1; 
+}
+
+
+.social-icon {
+  color: #333; 
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+  margin: 0 15px; 
+}
+
+.social-icon:hover {
+  color: #e1306c; 
+  text-shadow: 0 0 10px rgba(225, 48, 108, 0.7); 
+}
+
+
 .social-icon:hover:nth-child(1) {
-  color: #e1306c; /* Instagram pink */
+  color: #e1306c; 
 }
 
 .social-icon:hover:nth-child(2) {
-  color: #0077b5; /* LinkedIn blue */
+  color: #0077b5; 
 }
 
 .social-icon:hover:nth-child(3) {
-  color: #333; /* GitHub dark gray */
+  color: #333; 
+}
+
+.container {
+  position: relative; 
 }

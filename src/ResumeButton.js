@@ -1,7 +1,7 @@
 import React from 'react';
 
 function ResumeButton() {
-  const resumeId = 1;  // ID of the resume to download
+  const resumeId = 1;  
 
   const downloadResume = async () => {
     try {
@@ -14,7 +14,7 @@ function ResumeButton() {
       const url = window.URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
-      a.download = 'resume.pdf'; // You can set the filename dynamically if needed
+      a.download = 'resume.pdf'; 
       document.body.appendChild(a);
       a.click();
       a.remove();
@@ -29,7 +29,9 @@ function ResumeButton() {
         Download Resume
       </button>
     </div>
+    
   );
+  
 }
 
 export default ResumeButton;
