@@ -26,7 +26,7 @@ function ResumeButton() {
   return (
     <div className="left-align">
       <button className="resume-button" onClick={downloadResume}>
-        Download Resume
+         Resume
       </button>
     </div>
     
