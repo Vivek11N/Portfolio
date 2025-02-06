@@ -8,7 +8,6 @@ import About from './About';
 import Projects from './Project';
 import Contact from './Contact';
 import Home from './Home';
-<<<<<<< HEAD
 import ProjectDetails from './ProjectDetails';
 import LoginPage from './LoginPage'; // Import login page
 import AdminPage from './AdminPage'; // Import admin page
@@ -37,33 +36,11 @@ const ProtectedRoute = ({ element }) => {
 
   return isAuthenticated ? element : <Navigate to="/login" replace />;
 };
-=======
-import './App.css';  
->>>>>>> 621168c280c6c6755cd5ae4205355cc2a8073955
 
 function App() {
   return (
     <Router>
-<<<<<<< HEAD
       <MainApp />
-=======
-      <Navbar />
-      <div className="content">
-        <div id="home">
-          <Home />
-        </div>
-        <div id="about">
-          <About />
-        </div>
-        <div id="projects">
-          <Projects />
-          
-        </div>
-        <div id="contact">
-          <Contact />
-        </div>
-      </div>
->>>>>>> 621168c280c6c6755cd5ae4205355cc2a8073955
     </Router>
   );
 }

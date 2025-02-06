@@ -1,10 +1,6 @@
 import React, { useState } from 'react';
 import { FaInstagram, FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
-<<<<<<< HEAD
 
-=======
-import { Player } from '@lottiefiles/react-lottie-player';
->>>>>>> 621168c280c6c6755cd5ae4205355cc2a8073955
 import './Contact.css';
 
 function Contact() {
@@ -46,21 +42,7 @@ function Contact() {
 
  
 
-<<<<<<< HEAD
       
-=======
-      {/* Lottie animation positioned to the right */}
-      <div className="lottie-container">
-        <Player
-          autoplay
-          loop
-          src="Animation 2.json"  // Replace with your Lottie animation URL or local JSON file
-          style={{ height: '200px', width: '200px' }}
-        />
-      </div>
-
-      {/* Mail icon with Gmail redirect */}
->>>>>>> 621168c280c6c6755cd5ae4205355cc2a8073955
       <p className="text-center">
         <a
           href="https://mail.google.com/mail/?view=cm&fs=1&to=viveknarayanan117@gmail.com"
@@ -117,11 +99,7 @@ function Contact() {
       </form>
 
       <div className="text-center mt-3">
-<<<<<<< HEAD
         
-=======
-        {/* Social Media Icons */}
->>>>>>> 621168c280c6c6755cd5ae4205355cc2a8073955
         <a
           href="https://www.instagram.com/your-profile"  
           target="_blank"
@@ -132,11 +110,7 @@ function Contact() {
         </a>
 
         <a
-<<<<<<< HEAD
           href="https://www.linkedin.com/in/www.linkedin.com/in/vivek-narayanan12"  
-=======
-          href="https://www.linkedin.com/in/www.linkedin.com/in/vivek-narayanan12"  // Replace with your LinkedIn profile link
->>>>>>> 621168c280c6c6755cd5ae4205355cc2a8073955
           target="_blank"
           rel="noopener noreferrer"
           className="social-icon"
