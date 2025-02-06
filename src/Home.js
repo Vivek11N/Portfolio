@@ -1,32 +1,39 @@
-import React, { useEffect, useState } from 'react';
-import './Home.css';  // Import the CSS file for styling
+import React, { useState, useEffect } from "react";
+import { FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa";
+import { Player } from "@lottiefiles/react-lottie-player";
+import "./Home.css";
 
 function Home() {
-  const [text, setText] = useState('');
-  const fullText = 'H i, I am Vivek Narayanan';  // The typewriter text
-  const rotatingTexts = ['Software Developer', 'Travel Enthusiast', 'Gamer']; // Rotating texts
-  const [currentTextIndex, setCurrentTextIndex] = useState(0); // Index to track the rotating text
-  const [isTypewriterDone, setIsTypewriterDone] = useState(false); // Flag to check if typewriter effect is done
+  const rotatingTexts = ["SOFTWARE DEVELOPER", "WANDERLUST", "GAMER"];
+  const [currentTextIndex, setCurrentTextIndex] = useState(0);
 
-  // Function to generate stars dynamically
-  const createStars = () => {
-    const numStars = 750; // Adjust the number of stars
-    let stars = [];
-    for (let i = 0; i < numStars; i++) {
-      const size = Math.random() * 3 + 'px'; // Random size
-      const top = Math.random() * 100 + 'vh'; // Random vertical position
-      const left = Math.random() * 100 + 'vw'; // Random horizontal position
-      const delay = Math.random() * 2 + 's'; // Random animation delay
+  
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTextIndex((prevIndex) => (prevIndex + 1) % rotatingTexts.length);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [rotatingTexts.length]);
+
+ 
+  const generateStars = () => {
+    const stars = [];
+    for (let i = 0; i < 1500; i++) {
+      const topOffset = `${Math.random() * 100}vh`;
+      const leftOffset = `${Math.random() * 100}vw`;
+      const size = Math.random(); 
+      const speed = Math.random(); 
+
       stars.push(
         <div
           key={i}
           className="star"
           style={{
-            width: size,
-            height: size,
-            top: top,
-            left: left,
-            animationDelay: delay,
+            top: topOffset,
+            left: leftOffset,
+            "--size": size,
+            "--speed": speed,
           }}
         ></div>
       );
@@ -34,48 +41,53 @@ function Home() {
     return stars;
   };
 
-  useEffect(() => {
-    // Typewriter effect for the main text
-    let index = 0;
-    const interval = setInterval(() => {
-      if (index < fullText.length) {
-        setText((prev) => prev + fullText.charAt(index));
-        index++;
-      } else {
-        clearInterval(interval);
-        setIsTypewriterDone(true); // Mark typewriter effect as done
-      }
-    }, 200);
-
-    return () => clearInterval(interval); // Clean up interval
-  }, []);
-
-  useEffect(() => {
-    // Start rotating texts only after typewriter effect finishes
-    if (isTypewriterDone) {
-      const rotationInterval = setInterval(() => {
-        setCurrentTextIndex((prevIndex) => (prevIndex + 1) % rotatingTexts.length); // Cycle through the texts
-      }, 3000); // Change text every 3 seconds
-
-      return () => clearInterval(rotationInterval); // Clean up interval
-    }
-  }, [isTypewriterDone]);
-
   return (
     <div className="home-page">
-      <div className="stars">
-        {createStars()} {/* Generate stars dynamically */}
+     
+      <div className="stars">{generateStars()}</div>
+
+      
+      <div className="avatar-container">
+        <Player
+          autoplay
+          loop
+          src="Animation3.json"
+          style={{ height: "150px", width: "150px" }}
+          className="avatar"
+        />
       </div>
-      <h1>
-        <span className="typewriter-box">
-          <span className="typewriter-effect" style={{ animationDuration: `${fullText.length * 0.2}s` }}>
-            {text}
-          </span>
-          {isTypewriterDone && (
-            <span className="rotating-text">{rotatingTexts[currentTextIndex]}</span>
-          )}
-        </span>
-      </h1>
+
+      
+      <h1>Hi, I am Vivek Narayanan</h1>
+      <p className="rotating-text">{rotatingTexts[currentTextIndex]}</p>
+
+      
+      <div className="social-icons">
+        <a
+          href="https://www.instagram.com/your-profile"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="social-icon"
+        >
+          <FaInstagram size={35} />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/your-profile"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="social-icon"
+        >
+          <FaLinkedin size={35} />
+        </a>
+        <a
+          href="https://github.com/your-profile"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="social-icon"
+        >
+          <FaGithub size={35} />
+        </a>
+      </div>
     </div>
   );
 }

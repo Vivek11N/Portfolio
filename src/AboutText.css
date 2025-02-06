@@ -1,40 +1,177 @@
+/* Container styling */
 .about-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-    background-color: #1a1a1a;
-    color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 2rem;
+  gap: 2rem;
+  transition: opacity 0.5s ease-in-out; /* Smooth transition for visibility */
+  opacity: 0; /* Initially hidden */
+}
+
+.about-container.visible {
+  opacity: 1; /* Fade in when visible */
+}
+
+/* Text container */
+.about-text-container {
+  flex: 1;
+  max-width: 600px;
+}
+
+/* About Me and Education Headings - Display them on the same line */
+.about-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.about-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  padding: 0;
+}
+
+.about-nav li {
+  margin: 0 15px;
+  top: 10px;
+}
+
+.about-nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  font-size: 1.5rem; /* Set the heading font size */
+}
+
+.about-nav a:hover {
+  color: #007bff;
+}
+
+/* Heading and text styling */
+.about-heading, .education-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.about-heading {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: left;
+}
+
+.education-heading {
+  text-align: right;
+}
+
+.about-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: white;
+  word-wrap: break-word;
+}
+
+.about-image-container {
+  flex: 1;
+  max-width: 350px;
+}
+
+.about-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
   }
-  
+
   .about-text-container {
-    flex: 1;
-    margin-right: 20px;
+    margin-bottom: 2rem;
   }
-  
-  .about-heading {
+
+  .about-heading, .education-heading {
     font-size: 2rem;
-    margin-bottom: 10px;
-    color: #00ff00; /* Green accent */
   }
-  
+
   .about-text {
-    font-size: 1rem;
-    line-height: 1.6;
+    font-size: 0.95rem;
   }
-  
+
   .about-image-container {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    max-width: 250px;
   }
-  
+
   .about-image {
-    max-width: 80%; /* Adjust the percentage to reduce the image size */
-    max-height: 300px; /* Limit the height if necessary */
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
   }
-  
-  
+}
+
+@media (max-width: 480px) {
+  .about-heading, .education-heading {
+    font-size: 1.75rem;
+  }
+
+  .about-text {
+    font-size: 0.9rem;
+  }
+
+  .about-image-container {
+    max-width: 200px;
+  }
+}
+
+.about-nav {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.nav-button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  border: none;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.nav-button.active {
+  background-color: #007bff;
+  color: white;
+}
+
+.nav-button:hover {
+  background-color: #0056b3;
+  color: white;
+}
+
+.about-content {
+  padding: 20px;
+}
+
+/* Section styling */
+#about-me, #education {
+  margin-top: 40px;
+}
+
+.about-heading, .education-heading {
+  font-size: 2rem;
+  color: #333;
+}
+
+.about-text, .education-text {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Add smooth scrolling behavior */
+html {
+  scroll-behavior: smooth;
+}

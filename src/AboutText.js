@@ -1,9 +1,35 @@
-import React from 'react';
-import './AboutText.css'; // External CSS for styling
+import React, { useEffect, useState } from 'react';
+import './AboutText.css'; 
 
 function AboutText() {
+  const [isVisible, setIsVisible] = useState(false);
+  const [imageSrc, setImageSrc] = useState(null);
+
+  const checkVisibility = () => {
+    const section = document.querySelector('.about-container');
+    const rect = section.getBoundingClientRect();
+    if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+      setIsVisible(true); 
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', checkVisibility);
+    checkVisibility();
+    return () => window.removeEventListener('scroll', checkVisibility);
+  }, []);
+
+  useEffect(() => {
+    fetch('http://localhost:8080/api/aboutme/1/image') 
+      .then(response => response.blob())
+      .then(blob => {
+        setImageSrc(URL.createObjectURL(blob));
+      })
+      .catch(error => console.error('Error fetching about me image:', error));
+  }, []);
+
   return (
-    <section className="about-container">
+    <section className={`about-container ${isVisible ? 'visible' : ''}`}>
       <div className="about-text-container">
         <h1 className="about-heading">About Me</h1>
         <p className="about-text">
@@ -11,11 +37,11 @@ function AboutText() {
         </p>
       </div>
       <div className="about-image-container">
-        <img
-          src="./portfolio-bg.png" // Replace with the actual image path
-          alt="Vivek portrait"
-          className="about-image"
-        />
+        {imageSrc ? (
+          <img src={imageSrc} alt="Vivek portrait" className="about-image" />
+        ) : (
+          <p>Loading image...</p>
+        )}
       </div>
     </section>
   );

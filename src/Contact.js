@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { FaInstagram, FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';  // Import FaEnvelope for email icon
-import './Contact.css';  // Import custom styles for hover effect
+import { FaInstagram, FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
+
+import './Contact.css';
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -19,17 +20,17 @@ function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const response = await fetch('http://localhost:8080/api/contact', {
+    const response = await fetch('http://localhost:8080/api/portfolio', {
       method: 'POST',
       headers: {
-          'Content-Type': 'application/json',
+        'Content-Type': 'application/json',
       },
       body: JSON.stringify(formData),
-  });
-  
+    });
+
     if (response.ok) {
       alert('Message sent successfully!');
-      setFormData({ name: '', email: '', message: '' });  // Clear form after submission
+      setFormData({ name: '', email: '', message: '' });  
     } else {
       alert('Failed to send message');
     }
@@ -37,9 +38,11 @@ function Contact() {
 
   return (
     <section className="container mt-5">
-      <h1 className="text-center mb-4">Contact Me</h1>
+      <h1 className="text-center mb-4">CONTACT ME</h1>
 
-      {/* Mail icon with Gmail redirect */}
+ 
+
+      
       <p className="text-center">
         <a
           href="https://mail.google.com/mail/?view=cm&fs=1&to=viveknarayanan117@gmail.com"
@@ -52,7 +55,7 @@ function Contact() {
         <span className="ml-2">viveknarayanan117@gmail.com</span>
       </p>
 
-      {/* Contact form */}
+      
       <form onSubmit={handleSubmit} className="mx-auto" style={{ maxWidth: '500px' }}>
         <div className="mb-3">
           <label htmlFor="name" className="form-label">Name</label>
@@ -96,9 +99,9 @@ function Contact() {
       </form>
 
       <div className="text-center mt-3">
-        {/* Instagram Icon */}
+        
         <a
-          href="https://www.instagram.com/your-profile"  // Replace with your Instagram profile link
+          href="https://www.instagram.com/your-profile"  
           target="_blank"
           rel="noopener noreferrer"
           className="social-icon"
@@ -106,9 +109,8 @@ function Contact() {
           <FaInstagram size={40} />
         </a>
 
-        {/* LinkedIn Icon */}
         <a
-          href="https://www.linkedin.com/in/your-profile"  // Replace with your LinkedIn profile link
+          href="https://www.linkedin.com/in/www.linkedin.com/in/vivek-narayanan12"  
           target="_blank"
           rel="noopener noreferrer"
           className="social-icon"
@@ -116,9 +118,8 @@ function Contact() {
           <FaLinkedin size={40} />
         </a>
 
-        {/* GitHub Icon */}
         <a
-          href="https://github.com/your-profile"  // Replace with your GitHub profile link
+          href="https://github.com/your-profile"  
           target="_blank"
           rel="noopener noreferrer"
           className="social-icon"

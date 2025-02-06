@@ -1,0 +1,52 @@
+/* Overall styling */
+.project-details-container {
+    font-family: "'Smooch Sans', sans-serif";
+    color: white;
+  }
+  
+  /* Title styling */
+  .project-title {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+  
+  /* Image wrapper ensures consistent size */
+  .image-wrapper {
+    width: 100%;
+    height: 400px; /* Fixed height for all images */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Hides overflowing parts of the image */
+    margin-bottom: 20px;
+    border: 2px solid #f39c12; /* Optional: Add a border around the image */
+    border-radius: 10px; /* Optional: Rounded corners */
+  }
+  
+  /* Image styling */
+  .project-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover; /* Ensures the image fills the container without distortion */
+  }
+  
+  /* Description and details styling */
+  .project-description,
+  .project-details {
+    font-size: 20px;
+    line-height: 1.5;
+  }
+  
+  /* Error message styling */
+  .error-title {
+    font-family: "'Smooch Sans', sans-serif";
+    color: white;
+    font-size: 36px;
+  }
+  
+  .error-message {
+    font-family: "'Smooch Sans', sans-serif";
+    color: white;
+    font-size: 18px;
+  }
+  

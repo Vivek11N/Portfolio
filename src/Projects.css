@@ -1,0 +1,114 @@
+/* General Interactive Card Styles */
+.interactive-card {
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.3s ease;
+  
+}
+
+.interactive-card img {
+  transition: transform 0.3s ease;
+}
+
+.interactive-card:hover img {
+  transform: scale(1.1); 
+}
+
+.description-overlay {
+  background-color: rgba(0, 0, 0, 0.7); 
+  color: white;
+  opacity: 0; 
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.interactive-card:hover .description-overlay {
+  opacity: 1; 
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.card-body {
+  padding: 10px;
+  text-align: center;
+}
+
+/* Modal content styles */
+.modal-content {
+  overflow: hidden;
+}
+.container h1 {
+  color: white; /* Set the heading color to white */
+  font-size: 2.5rem; /* Optional: Adjust font size for better visibility */
+  font-weight: bold; /* Optional: Make the heading bold */
+  margin-bottom: 1rem; /* Add spacing below the heading */
+}
+
+.modal-body img {
+  border-radius: 5px;
+}
+
+/* Mobile Responsive for Cards */
+@media (max-width: 576px) {
+  .card-img-top {
+    height: 150px !important; 
+  }
+
+  .interactive-card:hover img {
+    transform: scale(1.05);  /* Slightly reduce the scale for smaller screens */
+  }
+}
+
+/* Tablet and Small Screen Responsive */
+@media (max-width: 768px) {
+  .interactive-card {
+    margin-bottom: 20px;
+  }
+
+  /* Reduce image scaling on tablet and small screens */
+  .interactive-card:hover img {
+    transform: scale(1.07); /* Slightly reduce the scale for tablets */
+  }
+
+  .modal-content {
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .modal-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+  }
+
+  .modal-body {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .modal-footer {
+    border-top: 1px solid #dee2e6;
+    background-color: #f8f9fa;
+  }
+
+  /* Modal image responsive adjustments */
+  .modal-body img {
+    max-height: 300px;
+  }
+
+  /* Adjust modal size for smaller screens */
+  .modal-dialog {
+    margin: 10px;
+  }
+}
+
+/* Larger devices (laptops and desktops) */
+@media (min-width: 769px) {
+  .interactive-card:hover img {
+    transform: scale(1.1);  /* Keep larger scaling for larger screens */
+  }
+}

@@ -1,23 +1,66 @@
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+  
+}
+
+.contact-form {
+  flex: 1; 
+  max-width: 500px;
+}
+
+.animation-container {
+  flex: 0 0 150px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.animation-container .lottie-player {
+  height: 150px;
+  width: 150px;
+}
+
 .social-icon {
-  color: #333; /* Default color */
-  transition: color 0.3s ease, text-shadow 0.3s ease;
-  margin: 0 15px; /* Add some spacing between icons */
+  margin: 0 10px;
+  color: #333;
 }
 
 .social-icon:hover {
-  color: #e1306c; /* Default hover color (Instagram pink) */
-  text-shadow: 0 0 10px rgba(225, 48, 108, 0.7); /* Glow effect */
+  color: #007bff; 
+}
+/* Apply white text color globally in the Contact component */
+.container {
+  color: white;
 }
 
-/* Specific hover colors for different icons */
-.social-icon:hover:nth-child(1) {
-  color: #e1306c; /* Instagram pink */
+h1, .form-label, .text-center, .social-icon {
+  color: white;
 }
 
-.social-icon:hover:nth-child(2) {
-  color: #0077b5; /* LinkedIn blue */
+.social-icon {
+  color: white; /* Ensure social icons have a white color */
 }
 
-.social-icon:hover:nth-child(3) {
-  color: #333; /* GitHub dark gray */
+form .form-control {
+  color: white; /* Change text color inside input/textarea fields */
+  background-color: #333; /* Optional: dark background to match the theme */
+}
+
+form .form-control::placeholder {
+  color: #bbb; /* Light color for placeholders */
+}
+
+button {
+  color: white; /* Button text color */
+  background-color: #007bff; /* Customize the button color */
 }
