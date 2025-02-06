@@ -6,6 +6,7 @@
 }
 
 .about-heading {
+<<<<<<< HEAD
   text-align: left;
   font-size: 2rem;
   margin-left: 20px;
@@ -54,3 +55,93 @@
 .fade-content.fade-in {
   opacity: 1;
 }
+=======
+    text-align: left;
+    font-size: 2rem;
+    margin-left: 20px;
+    color:white;
+  }
+  
+  .about-text {
+    text-align: left;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-left: 20px;
+    max-width: 550px; 
+    margin-top: 10px;
+    word-wrap: break-word; 
+  }
+  
+  .left-align {
+    margin-top: 20px;  
+    text-align: left;  
+  }
+  
+  .resume-button {
+    background-color: #4CAF50; 
+    color: white;
+    align-items: center;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: transform 0.3s ease, background-color 0.3s ease; 
+  }
+  
+  .resume-button:hover {
+    background-color: #24c77b; 
+    transform: scale(1.2); 
+  }
+  .stars {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2; /* Ensure stars are behind everything */
+    pointer-events: none; /* Prevent stars from interfering with UI interactions */
+    overflow: hidden; /* Prevent stars from overflowing the viewport */
+  }
+  
+  .star {
+    position: absolute;
+    width: 2px; /* Star size */
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8); 
+    animation: twinkle 2s infinite ease-in-out, fall linear infinite;
+  }
+  
+  @keyframes twinkle {
+    0%, 100% {
+      opacity: 0.5;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fall {
+    0% {
+      transform: translateY(-100%); 
+    }
+    100% {
+      transform: translateY(100vh); 
+    }
+  }
+  
+  .star:nth-child(odd) {
+    animation-duration: 3s;
+    animation-delay: calc(var(--random-delay) * 1s);
+  }
+  
+  .star:nth-child(even) {
+    animation-duration: 2s;
+    animation-delay: calc(var(--random-delay) * 0.5s);
+  }
+  
+>>>>>>> 621168c280c6c6755cd5ae4205355cc2a8073955

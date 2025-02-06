@@ -1,9 +1,15 @@
 import React, { useState, useEffect, useRef } from 'react';
 import AboutText from './AboutText';
 import Skills from './Skills';
+<<<<<<< HEAD
 import ResumeButton from './ResumeButton';
 import './About.css'; 
 import Education from './Education';
+=======
+
+import ResumeButton from './ResumeButton';
+import './About.css'; 
+>>>>>>> 621168c280c6c6755cd5ae4205355cc2a8073955
 
 function About() {
   const [isVisibleAboutText, setIsVisibleAboutText] = useState(false);

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
+=======
+import React from 'react';
+>>>>>>> 621168c280c6c6755cd5ae4205355cc2a8073955
 import './AboutText.css'; 
 
 function AboutText() {
@@ -37,11 +41,19 @@ function AboutText() {
         </p>
       </div>
       <div className="about-image-container">
+<<<<<<< HEAD
         {imageSrc ? (
           <img src={imageSrc} alt="Vivek portrait" className="about-image" />
         ) : (
           <p>Loading image...</p>
         )}
+=======
+        <img
+          src="./portfolio-bg.png" 
+          alt="Vivek portrait"
+          className="about-image"
+        />
+>>>>>>> 621168c280c6c6755cd5ae4205355cc2a8073955
       </div>
     </section>
   );

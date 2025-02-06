@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 body {
   background-color: #0d0d0e; 
   color: #000; 
@@ -24,6 +25,15 @@ body {
   margin-top: 20px;
   background-color: black; 
   color: #f5ebeb; 
+=======
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); 
+  gap: 10px;
+  margin-top: 10px;
+  background-color: #000; 
+  color: #fff; 
+>>>>>>> 621168c280c6c6755cd5ae4205355cc2a8073955
 }
 
 .skill-item {
@@ -32,7 +42,11 @@ body {
   border-radius: 10px; 
   padding: 20px;
   transition: transform 0.3s ease-in-out; 
+<<<<<<< HEAD
   background-color: black; 
+=======
+  background-color: #333; 
+>>>>>>> 621168c280c6c6755cd5ae4205355cc2a8073955
 }
 
 .skill-item:hover {
@@ -47,6 +61,7 @@ body {
   border-radius: 50%; 
   border: 2px solid #ddd; 
 }
+<<<<<<< HEAD
 /* Ensure smooth background transition */
 .navbar-nav .nav-link {
   transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
@@ -63,10 +78,46 @@ body {
 .navbar-nav .nav-link:hover {
   background-color: #0056b3; /* Darken the background on hover */
   color: #fff !important; /* Ensure text color is white on hover */
+=======
+
+
+.skill-level {
+  margin-top: 10px;
+  width: 100%; 
+  background-color: #555; 
+  border-radius: 5px; 
+  height: 10px; 
+}
+
+.level-bar {
+  height: 100%; 
+  background-color: #4caf50; 
+  border-radius: 5px; 
+  transition: width 0.3s ease-in-out; 
 }
 
 
+.resume-button {
+  background-color: #007BFF;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+>>>>>>> 621168c280c6c6755cd5ae4205355cc2a8073955
+}
 
+
+<<<<<<< HEAD
+
+=======
+
+body {
+  background-color: #000; 
+  color: #fff; 
+}
+
+
+>>>>>>> 621168c280c6c6755cd5ae4205355cc2a8073955
 .resume-button {
   background-color: #007BFF;
   color: white;
